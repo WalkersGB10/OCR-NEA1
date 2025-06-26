@@ -13,8 +13,8 @@ def encrypt(password):
   char = "abcdefgjijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
   for i in password:
     pos = char.index(i)
-    if pos > 55:
-      newpassword += char[pos-55]
+    if pos > (len(char)-6):
+      newpassword += char[pos-(len(char)-6)]
     else:
       newpassword += char[pos+6]
   return newpassword
@@ -52,7 +52,7 @@ for i in range(0, len(contents)):
   contents[i] = contents[i].split(":")
 
 while chances > 0:
-  question = randint(0, 14)
+  question = randint(0, len(contents)-1)
   pair = contents[question]
 
   print("\nArtist:", pair[1])
