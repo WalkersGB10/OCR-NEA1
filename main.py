@@ -1,4 +1,5 @@
 #imports
+import winsound
 from random import randint
 import sys
 
