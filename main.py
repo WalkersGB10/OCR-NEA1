@@ -20,6 +20,7 @@ def encrypt(password):
       newpassword += char[pos+6]
   return newpassword
 
+
 def login(user):
   f = open("Users.txt", "r")
   contents = f.read()
@@ -88,21 +89,12 @@ f.close()
 for i in range(0, len(highscores)):
   highscores[i] = highscores[i].split(":")
 
-if score > int(highscores[0][1]):
-  highscores.pop()
-  highscores.insert(0, [user, str(score)])
-elif score > int(highscores[1][1]):
-  highscores.pop()
-  highscores.insert(1, [user, str(score)])
-elif score > int(highscores[2][1]):
-  highscores.pop()
-  highscores.insert(2, [user, str(score)])
-elif score > int(highscores[3][1]):
-  highscores.pop()
-  highscores.insert(3, [user, str(score)])
-elif score > int(highscores[4][1]):
-  highscores.pop()
-  highscores.insert(4, [user, str(score)])
+
+for i in range(0, len(highscores)):
+    if score > int(highscores[i][1]):
+        highscores.pop()
+        highscores.insert(i, [user, str(score)])
+        break
 
 f = open("Highscores.txt", "w")
 for i in highscores:
