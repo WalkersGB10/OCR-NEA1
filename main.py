@@ -59,6 +59,9 @@ while chances > 0:
   print("Song initials: ")
   for i in pair[0].split():
     print(i[0], end=" ")
+
+  winsound.PlaySound(pair[0]+".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+
   
   while chances > 0:
     answer = input("\nWhat is the song name?").lower()
