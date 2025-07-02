@@ -93,6 +93,7 @@ for i in range(0, len(highscores)):
 for i in range(0, len(highscores)):
     if score > int(highscores[i][1]):
         highscores.pop()
+        highscores.pop()
         highscores.insert(i, [user, str(score)])
         break
 
