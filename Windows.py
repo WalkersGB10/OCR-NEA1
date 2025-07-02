@@ -97,7 +97,7 @@ for i in range(0, len(highscores)):
         break
 
 f = open("Highscores.txt", "w")
-for i in highscores:
-  print(str(i+1) + ": "highscores[0], highscores[1]
-  f.write(i[0] + ":" + i[1] + "\n")
+for i in range(0, len(highscores)):
+  f.write(highscores[i][0] + ":" + highscores[i][1] + "\n")
+  print(str(i+1), " :", highscores[i][0], highscores[i][1])
 f.close()
