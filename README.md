@@ -15,4 +15,5 @@ download Linux.py and run in python IDE (Should work in thonny - may need to sud
 For WEB USE:
 download Web.py
 attach all files into the web IDE of choice
+REMOVE KNOCKING ON HEAVEN'S DOOR AND ANY SONG WITH AN APOSTROPHE (') IN THE NAME FROM BOTH Questions.txt AND Songs because the apostrophe messes up IPython by ending the string there
 ensure web IDE supports IPython (Definitely works on Jupyter Notebook)
